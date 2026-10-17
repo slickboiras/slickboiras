@@ -1,0 +1,37 @@
+# Rebuilds dark_mode.svg / light_mode.svg with live GitHub stats.
+# Runs daily, on every push to main, and on demand (Actions tab -> Run workflow).
+name: Update profile card
+
+on:
+  schedule:
+    - cron: "0 0 * * *"        # 07:00 WIB every day
+  push:
+    branches: [main]
+    paths-ignore: ["*.svg"]    # don't re-run just because the card itself changed
+  workflow_dispatch:
+
+permissions:
+  contents: write              # needed to commit the regenerated SVGs
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Generate SVGs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python generate.py
+
+      - name: Commit if changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add dark_mode.svg light_mode.svg
+          git diff --cached --quiet || git commit -m "chore: refresh profile card stats"
+          git push
