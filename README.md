@@ -1,5 +1,5 @@
 # 💫 About Me:
-## 👋 About Me<br><br>Hi, I'm **Farras** — a Computer Engineering student at **BINUS University** (Kemanggisan, Jakarta) who likes understanding how things work from the transistor up to the software on top.<br><br>- 🎯 Aiming to become an **AI engineer**, with a hardware-aware mindset<br>- ⚡ Building things with **electronics, microcontrollers, and analog circuits**<br>- 🌐 Starting a small venture with friends, building **websites for small businesses**<br>- 🤖 Exploring **AI tools and productivity workflows**<br>
+## 👋 About Me<br><br>Hi, I'm **Farras** — a Computer Engineering student at **BINUS University** who likes understanding how things work from the transistor up to the software on top.<br><br>- 🎯 Aiming to become an **AI engineer**, with a hardware-aware mindset<br>- ⚡ Building things with **electronics, microcontrollers, and analog circuits**<br>- 🌐 Starting a small venture with friends, building **websites for small businesses**<br>- 🤖 Exploring **AI tools and productivity workflows**<br>
 
 
 ## 🌐 Socials:
